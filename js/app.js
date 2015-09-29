@@ -12,7 +12,7 @@
             events: true,
           });
         
-        $urlRouterProvider.otherwise("/home");
+        $urlRouterProvider.otherwise("home");
         
         $stateProvider.state('home',{
                             url:"/home",
@@ -53,8 +53,7 @@
                             templateUrl: 'views/dashboard.html'
                         });
         
-         $locationProvider.html5Mode(true);
-      
+         
         
     });
     
