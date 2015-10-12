@@ -1,0 +1,14 @@
+[
+  {
+    "_id": 1,
+    "userId": 1,
+    "name": "Nike",
+    "description": "Nike shoe"
+  },
+  {
+    "_id": 2,
+    "userId": 1,
+    "name": "Addidas",
+    "description": "Addidas shoe"
+  }
+]

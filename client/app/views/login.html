@@ -1,0 +1,38 @@
+<div class="view-container">
+    <div class="grid-block">
+        <div class="medium-5 grid-container">
+            <div class="grid-block align-center">
+                <h2 class="title">Login</h2>
+            </div>
+
+            <div class="align-center">
+                <div class="login-box">
+                    <div class="row">
+                        <div class="">
+                            <form ng-submit="login(user)" novalidate name="userLogin" class="login-form">
+                                <div class="row">
+                                    <div class="large-12 columns">
+                                        <label for="">User Name
+                                            <input type="text" ng-model="user.name" name="name" placeholder="Your Name" required>
+                                        </label>
+                                         <div ng-show="userLogin.$submitted || userLogin.name.$touched">
+                                              <div ng-show="userLogin.name.$error.required" class="error">Give your username<br><br></div>
+                                        </div>
+                                        <label for="">Password
+                                            <input type="password"  ng-model="user.password" name="password" placeholder="Your Password" required>
+                                        </label>
+                                         <div ng-show="userLogin.$submitted || userLogin.password.$touched">
+                                              <div ng-show="userLogin.password.$error.required" class="error">Give your password <br><br></div>
+                                        </div>
+                                        <input type="submit" class="button expand" value="Log In">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

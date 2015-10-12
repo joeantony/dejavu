@@ -1,0 +1,447 @@
+/*
+Project Name: couponCode 
+Description: implement couponCode using technology for learning.
+Author: santhosh
+*/
+
+
+/*@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800);
+@import url(http://fonts.googleapis.com/css?family=Merriweather:400,300,400italic,300italic,700,700italic);
+@import url(http://fonts.googleapis.com/css?family=Nunito:400,300,700);
+*/
+
+
+/* ==========================================================================
+Global Styles
+========================================================================== */
+
+.no-padding {
+    padding: 0;
+}
+
+.no-margin {
+    margin: 0;
+}
+
+a {
+    color: #FF5274;
+    -webkit-transition-timing-function: ease;
+    transition-timing-function: ease;
+    -webkit-transition-duration: 200ms;
+    transition-duration: 200ms;
+    -webkit-transition-property: color, border-color, background-color;
+    transition-property: color, border-color, background-color;
+}
+
+a:hover,
+a:focus {
+    color: #D7405D;
+    text-decoration: none;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300;
+    color: rgba(28, 54, 83, 0.6);
+    -webkit-text-size-adjust: 100%;
+}
+
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    list-style: none;
+}
+
+.section-padding {
+    padding: 120px 0;
+}
+
+
+/* ==========================================================================
+Typography
+========================================================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Open Sans", sans-serif;
+}
+
+p {
+    font-size: 15px;
+    line-height: 29px;
+    color: rgba(28, 54, 83, 0.6);
+    padding-bottom: 20px;
+}
+
+h1 {
+    font-size: 60px;
+}
+
+h2 {
+    font-size: 40px;
+    font-weight: 300;
+    color: #3D4351;
+}
+
+h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #3D4351;
+}
+
+h4 {
+    font-size: 18px;
+}
+
+h5 {
+    font-size: 15px;
+    color: #3D4351;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.btn {
+    font-size: 13px;
+    border: solid 2px;
+    border-radius: 40px;
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+.btn:hover,
+.btn:focus {
+    color: #fff;
+    border-color: #FF5274;
+    background-color: #FF5274;
+}
+
+.btn-white {
+    font-size: 13px;
+    border: solid 2px;
+    border-radius: 40px;
+    display: inline-block;
+    border-color: #fff;
+}
+
+.btn-white:hover,
+.btn-white:focus {
+    color: #FF5274;
+    border-color: #FF5274;
+}
+
+.btn-fill {
+    color: #fff;
+    border: solid 2px #FF5274;
+    border-radius: 40px;
+    display: inline-block;
+    text-transform: uppercase;
+    background-color: #FF5274;
+}
+
+.btn-fill:hover,
+.btn-fill:focus {
+    color: #fff;
+    background-color: #D7405D;
+    border-color: #D7405D;
+}
+
+.btn-small {
+    padding: 8px 40px;
+}
+
+.btn-large {
+    padding: 15px 40px;
+}
+
+.btn-margin-right {
+    margin-right: 20px;
+}
+
+
+/* ==========================================================================
+Hero
+========================================================================== */
+
+.hero {
+    min-height: 750px;
+    background: url("../images/hero.jpg") center center;
+    background-size: cover;
+    position: relative;
+}
+
+.hero .down-arrow a {
+    color: #fff;
+}
+
+.hero h1 {
+    color: #fff;
+    margin-bottom: 40px;
+}
+
+.hero p.intro {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+    margin-bottom: 80px;
+}
+
+.hero .hero-content {
+    padding-top: 22%;
+}
+
+.navigation {
+    -webkit-transition: all 300ms ease-in-out;
+    transition: all 300ms ease-in-out;
+    width: 100%;
+    /*z-index: 999;
+    position:absolute;*/
+    background-color: #232731;
+}
+
+.navigation-bar {
+    position: relative;
+    background-color: #232731;
+}
+    
+header {
+    padding: 25px 0;
+    border-bottom: solid 1px rgba(255, 255, 255, 0.2);
+    position: relative;
+    width: 1170px;
+    margin: 0 auto;
+    -webkit-transition: padding 300ms ease-in-out;
+    transition: padding 300ms ease-in-out;
+}
+
+header a {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+header a.login {
+    margin-right: 20px;
+}
+
+header .logo {
+    display: inline-block;
+}
+
+header ul.primary-nav {
+      padding: 35px 0;
+}
+
+header ul.primary-nav li {
+    display: inline;
+}
+
+header ul.primary-nav li.active a{
+    color: #FF5274;
+}
+
+header ul.primary-nav li a {
+    color: #fff;
+    padding-right: 25px;
+}
+
+header ul.primary-nav li a:hover {
+    color: #FF5274;
+}
+
+header ul.primary-nav li:last-child a {
+    padding-right: 0px;
+}
+
+header ul.member-actions li {
+    display: inline;
+}
+
+header ul.member-actions li a {
+    color: #fff;
+}
+
+header ul.member-actions li a:hover {
+    color: #FF5274;
+}
+
+header .header-nav {
+    display: inline-block;
+}
+
+header .member-actions {
+    margin: 30px 0;
+}
+
+
+.title {
+    margin: 70px 90px 30px;
+    border-bottom: 2px solid #E2E2E2;
+}
+
+.signed-in{
+    margin: 15px 0;
+}
+.signed-in li{
+    color: #FFF;
+    display: inline-block;
+    padding: 8px;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+.signed-in li:last-child{
+     padding-left: 30px;
+}
+
+/* --------------------------------------------------------------
+    LOGIN BOX
+--------------------------------------------------------------*/
+
+.login-box {
+    background: #fff;
+    border: 1px solid #ddd;
+    margin: 50px 0;
+    padding: 40px 20px 0 20px;
+}
+
+.login-form input.ng-invalid.ng-touched {
+    border: 1px solid #FA787E;
+    _background-attachment: #FA787E;
+}
+
+.login-form input.ng-valid.ng-touched {
+    _background-color: #78FA89;
+    border: 1px solid #78FA89;
+}
+.error {
+    color: #FA787E;
+}
+
+
+/* --------------------------------------------------------------
+    SIGNUP
+--------------------------------------------------------------*/
+
+.signup-title {
+    margin: 50px 50px 30px;
+    text-align: center;
+}
+.signup-box {
+     padding: 30px 0;
+}
+
+.social-login-title{
+    margin: 0 20px;
+    text-align: center;
+}
+.social-login-title h3{
+    margin-bottom: 5px;
+}
+.social-login-title p{
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+}
+
+.login-list li{
+    padding: 10px;
+}
+
+.login-link{
+    padding: 10px;    
+}
+.login-link img{
+    width: 34px;
+    height: 34px;
+    margin-right: 15px;
+}
+
+
+
+
+/* --------------------------------------------------------------
+    CAMPAIGN CREATE
+--------------------------------------------------------------*/
+.coupon-list{
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+
+.coupon-list li{
+    margin-left: 23px;
+    list-style-type: decimal;
+    color: #333333;
+}
+.coupon-code{
+    text-transform: uppercase;
+}
+
+.config-box {
+    border: 1px solid #333;
+    padding: 20px 20px 0;
+    opacity: 1;
+}
+.config-box.ng-hide-add,
+.config-box.ng-hide-remove {
+  transition: all linear 2s;
+}
+
+.config-box.ng-hide {
+  opacity: 0;
+  padding: 0;
+  height: 0;
+}
+
+/* --------------------------------------------------------------
+    CAMPAIGN LIST
+--------------------------------------------------------------*/
+
+table {
+  background: #FFFFFF;
+  border: solid 1px #DDDDDD;
+  margin-bottom: 1.25rem;
+  table-layout: auto; }
+  table caption {
+    background: transparent;
+    color: #222222;
+    font-size: 1rem;
+    font-weight: bold; }
+  table thead {
+    background: #F5F5F5; }
+    table thead tr th,
+    table thead tr td {
+      color: #222222;
+      font-size: 0.875rem;
+      font-weight: bold;
+      padding: 0.5rem 0.625rem 0.625rem; }
+  table tfoot {
+    background: #F5F5F5; }
+    table tfoot tr th,
+    table tfoot tr td {
+      color: #222222;
+      font-size: 0.875rem;
+      font-weight: bold;
+      padding: 0.5rem 0.625rem 0.625rem; }
+  table tr th,
+  table tr td {
+    color: #222222;
+    font-size: 0.875rem;
+    padding: 0.5625rem 0.625rem;
+    text-align: left; }
+  table tr.even, table tr.alt, table tr:nth-of-type(even) {
+    background: #F9F9F9; }
+  table thead tr th,
+  table tfoot tr th,
+  table tfoot tr td,
+  table tbody tr th,
+  table tbody tr td,
+  table tr td {
+    display: table-cell;
+    line-height: 1.125rem; }

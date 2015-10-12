@@ -1,0 +1,60 @@
+[
+  {
+    "_id": 1,
+    "name": "new year drive",
+    "userId": 1,
+    "productId": 1,
+    "totalBudget": 2000,
+    "coupons": [
+      {
+        "code": "RAISE16",
+        "value": 100,
+        "count": 30,
+        "redeemedCount": 0
+      },
+      {
+        "code": "RISE16",
+        "value": 30,
+        "count": 100,
+        "redeemedCount": 0
+      },
+      {
+        "code": "NEWDAWN16",
+        "value": 20,
+        "count": 200,
+        "redeemedCount": 0
+      }
+    ],
+    "startDate": "2015-09-14T01:00:00+01:00",
+    "endDate": "2015-09-24T01:00:00+01:00"
+  },
+  {
+    "_id": 2,
+    "name": "xmas drive",
+    "userId": 1,
+    "productId": 1,
+    "totalBudget": 10000,
+    "coupons": [
+      {
+        "code": "SANTA",
+        "value": 100,
+        "count": 30,
+        "redeemedCount": 0
+      },
+      {
+        "code": "XMAS15",
+        "value": 30,
+        "count": 100,
+        "redeemedCount": 0
+      },
+      {
+        "code": "CAKES",
+        "value": 20,
+        "count": 200,
+        "redeemedCount": 0
+      }
+    ],
+    "startDate": "2015-09-14T01:00:00+01:00",
+    "endDate": "2015-10-14T01:00:00+01:00"
+  }
+]

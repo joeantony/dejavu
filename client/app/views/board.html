@@ -1,0 +1,41 @@
+<div class="">
+
+  <!--//MAIN-NAV HEADER-->
+  <section class="navigation">
+    <header>
+      <div class="header-content">
+        <div class="grid-block">
+          <div class="small-2 grid-block align-center">
+            <a ui-sref="board.home"><img src="images/coupon.png" alt="Coupon logo" style="height:90px"></a>
+          </div>
+          <div class="small-6 grid-block">
+            <ul class="primary-nav">
+              <li ui-sref-active="active"><a ui-sref="board.campaign">Campaign</a></li>
+              <li ui-sref-active="active"><a ui-sref="board.campaignList">Lists</a></li>
+              <li ui-sref-active="active"><a ui-sref="board.dashboard">Dashboard</a></li>
+            </ul>
+          </div>
+
+          <div class="small-4 grid-block">
+            <div class="grid-block align-right">
+              <ul class="member-actions" ng-show="login">
+                <li><a ui-sref="#/login" class="login">Log in</a></li>
+                <li><a ui-sref="#/signup" class="btn-white btn-small">Sign up</a></li>
+              </ul>
+              <ul class="signed-in" ng-show="logout">
+                <li>Santhosh Kumar</li>
+                <li><img src="images/my-photo.jpg" alt=""></li>
+                <li></li>
+                <button ng-click="signOut()">Sign Out</button>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+  </section>
+
+ <!-- //MAIN CONTENT-->
+  <div ui-view></div>
+
+</div>

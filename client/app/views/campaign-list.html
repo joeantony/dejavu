@@ -1,0 +1,40 @@
+<div class="view-container">
+    <div class="grid-block">
+        <div class="small-10 grid-container">
+            <div class="grid-block align-center">
+                <h2 class="title">CAMPAIGN LISTS</h2>
+            </div>
+        </div>
+    </div>           
+        <br><br><br>     
+    <div class=" grid-block  align-center">
+        <div class="small-8 grid-content">
+
+            <table role="table">
+              <thead>
+                <tr>
+                  <th width="250">Campaign Name</th>
+                  <th width="250">Product</th>
+                  <th width="200">Budget</th>
+                  <th width="100"></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr ng-repeat="list in couponList track by $index">
+                  <td>{{list.name}}</td>
+                 <td ng-repeat="prod in products | filter: {_id:list.productId}:true">{{prod.name}}</td>
+                 <!-- <td>{{list.productId}}</td>-->
+                  <td>{{list.totalBudget | currency:'Rs '}}</td>
+                  <td>
+                     <a href="#/campaign-update/{{list._id}}" ><img src="images/icons/edit_24px.svg" alt=""></a>
+                      <a href="" ><img src="images/icons/ic_delete_black_24px.svg" alt=""></a>
+                    </td>
+                </tr>
+                
+              </tbody>
+            </table>
+
+        </div>
+    </div>
+    <br><br><br><br><br><br>          
+</div>   

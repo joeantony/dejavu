@@ -1,0 +1,81 @@
+<div class="view-container">
+  <div class="grid-container align-center">
+
+    <div class="grid-block align-center">
+      <div class="signup-title">
+        <h2>SIGNUP</h2>
+        <p class="welcome">Welcome to this awesome app!</p>
+      </div>
+    </div>
+
+    <div class="grid-block signup-box">
+      <div class="grid-content">
+        <div class="card">
+          <div class="card-section">
+            <form>
+              <div class="row">
+                <div class="small-12 columns">
+                  <label for="">Username
+                    <input type="text" name="username" placeholder="Your Name">
+                  </label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="small-12 columns">
+                  <label for="">Email
+                    <input type="email" name="email" placeholder="You Email Id">
+                  </label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="small-12 columns">
+                  <label for="">Password
+                    <input type="password" name="password" placeholder="Your Password">
+                  </label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="small-12 columns">
+                  <input type="submit" value="Sign Up!" class="button expand">
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+      </div>
+
+
+      <div class="grid-content">
+        <div class="card">
+          <div class="card-section">
+            <div class="grid-block align-center">
+              <div class="social-login-title">
+                <h3>Social Media Login</h3>
+                <p class="welcome">Use your social media login credentials</p>
+              </div>
+            </div>
+            <ul class="login-list">
+              <li>
+                <div ng-app="directive.g+signin">
+                  <google-plus-signin clientid="647262340925-i3mgtepd1fi36esl94eqq871ialg6brn.apps.googleusercontent.com"></google-plus-signin>
+                </div>
+              </li>
+              <!--<li><div id="my-signin2"></div></li>-->
+              <!--<li><div class="g-signin2" data-onsuccess="onSignIn"></div></li>-->
+              <!--<li><a href="" class="login-link"><img src="images/webicon-googleplus.png" alt="">using Google +</a></li>-->
+              <li>
+                <a href="" class="login-link"><img src="images/webicon-twitter.png" alt="" size="medium">using Twitter</a>
+              </li>
+              <li>
+                <a href="" class="login-link"><img src="images/webicon-facebook.png" alt="" size="medium"> using Facebook</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>

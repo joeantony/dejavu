@@ -1,0 +1,79 @@
+<div class="">
+   <div class="grid-block">
+      <div class="medium-5  grid-container">
+       <div class="grid-block align-center">
+            <h2 class="title">CAMPAIGN CREATE</h2>
+        </div>        
+                  
+           <div class="grid-block">
+               <div class="grid-content">
+                <form ng-submit="createCampaign()" novalidate>
+                    <label for="">Campaign Name
+                    <input type="text" ng-model="entryCampaign.name" placeholder="Give your name"></label>
+                    <label for="">Brand Name
+                    <input type="text" ng-model="entryCampaign.product" placeholder="product name"></label>
+                    <label for="">Start Date
+                    <input type="date" ng-model="entryCampaign.startDate"></label>
+
+                    <label for="">End Date
+                    <input type="date"  ng-model="entryCampaign.endDate"></label>
+
+                    <label for="">Budget
+                    <input type="number"  ng-model="entryCampaign.totalBudget"></label>
+                    <br><br>
+                    
+                    <a class="secondary button" ng-click="configShow = !configShow" >
+                        <img src="images/icons/add.svg" alt=""><strong> COUPON CONFIG</strong></a>
+                    
+                    <ul class="coupon-list">
+                        <li ng-repeat="coupon in configCoupons track by $index"> {{coupon.value}} coupon of ${{coupon.count}}</li>
+                    </ul>
+                    
+                    <div ng-show="configShow" class="config-box">
+                      <div class="grid-block">
+                          <div class="small-12 grid-content">
+                              <label for="">Coupon Code
+                                  <input type="text" ng-model="coupon.code" placeholder="Coupon Code like 'RAISE100'" class="coupon-code" required>
+                              </label>
+                          </div>
+                      </div>
+                       <div class="grid-block">
+                           <div class="small-12 medium-6 grid-content">
+                               <label for="">Value
+                                <input type="number" ng-model="coupon.value" required></label>
+                           </div>
+                           <div class="small-12 medium-6 grid-content">
+                                <label for="">Count
+                                <input type="number" ng-model="coupon.count" required></label>
+                           </div>
+                        </div>  
+                        <!--<div class="grid-block">
+                          <div class="small-12 medium-6 grid-content">
+                              <label for="">Redeem Count
+                                  <input type="number" ng-model="coupon.redeem" placeholder="Coupon Redeem ">
+                              </label>
+                          </div>
+                        </div>--> 
+                        <div class="align-right grid-block">
+                           <div class="small-2">
+                               <input type="button" value="Add" ng-click="couponAdd()" class="success button">
+                           </div>
+                        </div>    
+                    </div>
+                    <br><br>
+                   <div class="grid-block align-center">
+                       <div class="small-12">
+                            <input type="submit" value="CREATE COUPON" class="success button expand">   
+                       </div>
+                   </div>
+
+                </form>
+            </div>
+           </div>
+           <br><br><br><br>
+       
+       </div>
+       
+   </div>    
+  
+</div>
